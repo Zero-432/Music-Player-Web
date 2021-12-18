@@ -1,12 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/app.css">
     <title>Music Player</title>
 </head>
+
 <body>
-    
+    <div class="wrapper">
+        <header class="header">
+            <div class="container-fluid">
+                <div class="header-main d-grid">
+                    <div class="header-user">
+                        <img src="./images/logo.png" alt="loading" class="user-logo">
+                    </div>
+                    <div class="header-search">
+                        <div class="arrows">
+                            <div class="arrow arrow-left icon active">
+                                <i class="fas fa-chevron-left 2x"></i>
+                            </div>
+                            <div class="arrow arrow-right icon">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                        </div>
+                        <div class="header-toggle">
+                            <i class="fas fa-bars"></i>
+                        </div>
+                        <div>
+                            <div class="search-wrapper">
+                                <i class="fas fa-search"></i>
+                                <input type="text" class="search-input" placeholder="Search for artists, songs and ...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-actions">
+                        <div class="action">
+                            <i class="fas fa-bell"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="main">
+                <div class="container-fluid">
+                    <div class="main-wrapper d-grid">
+                        <ul class="navbar">
+                            <div class="navbar-close">
+                                <i class="fas fa-times"></i>
+                            </div>
+                            <div class="navbar-user">
+                                <img src="./images/logo.png" alt="loading" class="user-logo">
+                                <h2>Zero</h2>
+                            </div>
+                            <li class="navbar-item icon active">
+                                <i class="fas fa-home"></i>
+                                <span class="navbar-name--icon">Trang chủ</span>
+                            </li>
+                            <li class="navbar-item icon">
+                                <i class="fas fa-music"></i>
+                                <span class="navbar-name--icon">Bài hát</span>
+                            </li>
+                            <li class="navbar-item icon">
+                                <i class="fas fa-address-book"></i>
+                                <span class="navbar-name--icon">playlist</span>
+                            </li>
+                            <li class="navbar-item icon">
+                                <i class="fab fa-youtube"></i>
+                                <span class="navbar-name--icon">Video</span>
+                            </li>
+                            <li class="navbar-item icon">
+                                <i class="fas fa-sliders-h"></i>
+                                <span class="navbar-name--icon">Cài đặt</span>
+                            </li>
+                            <div class="line"></div>
+                        </ul>
+                        <div class="data">
+                            <div class="playlist">
+                                <div class="playlist-title">
+                                    <h2 class="playlist-heading">
+                                        Playlists
+                                    </h2>
+                                    <div class="playlist-more">
+                                        <a href="#">More
+                                            <span><i class="fas fa-chevron-right"></i></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="playlist-data">
+                                </div>
+                            </div>
+                            <div class="recently">
+                                <div class="recently-title">
+                                    <h2 class="recently-heading">Recently played</h2>
+                                </div>
+                                <div class="recently-data">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="other">
+                            <div class="other-update">
+                                <img src="./images/img_cover_1.jpg" alt="loading" class="img-update">
+                                <button class="other-arrow">
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                            <div class="other-artists">
+                                <h2 class="other-title">
+                                    Fav Artists
+                                </h2>
+                                <div class="other-data">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="dasboard">
+                <div class="container-fluid">
+                    <div class="dasboard-main">
+                        <div class="dasboard-song--info">
+                            <img src="./images/img_cover_3.jpg" alt="loading" class="img-bg">
+                            <div class="dasboard-content">
+                                <div class="dasboard-title">
+                                    Dark paradise
+                                </div>
+                                <div class="dasboard-desc">
+                                    Lana del ray
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dasboard-control">
+                            <div class="btn btn-prev">
+                                <i class="fas fa-step-backward"></i>
+                            </div>
+                            <div class="btn btn-toggle--play">
+                                <i class="fas fa-pause icon-pause"></i>
+                                <i class="fas fa-play icon-play"></i>
+                            </div>
+                            <div class="btn btn-next">
+                                <i class="fas fa-step-forward"></i>
+                            </div>
+                        </div>
+                        <div class="dasboard-progress">
+                            <div id="waveform" class="progress"></div>
+                            <!-- <input id="progress" class="progress" type="range" value="0" step="1" min="0" max="100"> -->
+                            <div class="timer">
+                                <span class="current">0:00</span>
+                                <span class="duration">0:00</span>
+                            </div>
+                            <!-- <audio id="audio" src="./songs/Clean Bandit - Symphony (feat. Zara Larsson).mp3"></audio> -->
+                        </div>
+                        <div class="dasboard-control--2">
+                            <div class="btn btn-rate">
+                                <span class="rate-quantity">3</span>
+                                <i class="fas fa-star" onclick="rateStar()"></i>
+                            </div>
+                            <div class="btn btn-repeat">
+                                <i class="fas fa-redo"></i>
+                            </div>
+                            <div class="btn btn-random">
+                                <i class="fas fa-random"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="https://unpkg.com/wavesurfer.js"></script>
+    <script src="./js/main.js"></script>
 </body>
+
 </html>

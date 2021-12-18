@@ -1,0 +1,152 @@
+.dasboard {
+  display: none;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  background: rgb(29, 16, 33);
+  background: linear-gradient(
+    90deg,
+    rgba(29, 16, 33, 1) 0%,
+    rgba(19, 15, 29, 1) 100%
+  );
+  border-radius: 60px 60px 0 0;
+  &-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+  }
+  &-song--info {
+    display: flex;
+    align-items: center;
+    .img-bg {
+      width: 70px;
+      height: 70px;
+      border-radius: 15px;
+      box-shadow: rgba(181, 181, 184, 35%) 0px 5px 20px;
+      object-fit: cover;
+    }
+  }
+  &-content {
+    margin-left: 20px;
+  }
+  &-title {
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  &-desc {
+    opacity: 0.4;
+    font-size: 14px;
+  }
+  &-control {
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
+    .btn i {
+      font-size: 1.5rem;
+    }
+    .btn-toggle--play {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: none;
+      background: rgb(87, 4, 112);
+      background: linear-gradient(
+        120deg,
+        rgba(87, 4, 112, 1) 0%,
+        rgba(121, 87, 232, 1) 18%,
+        rgba(233, 198, 250, 1) 61%,
+        rgba(244, 20, 190, 1) 100%
+      );
+      .icon-pause {
+        display: none;
+      }
+    }
+    .btn-toggle--play:hover {
+      border: 2px solid yellow;
+      color: yellow;
+    }
+  }
+  &-progress {
+    display: flex;
+    flex-direction: column;
+    width: 650px;
+    gap: 10px 0;
+    margin-top: 20px;
+    .progress {
+      cursor: pointer;
+    }
+    .timer {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  &-control--2 {
+    display: flex;
+    align-items: center;
+    gap: 0 40px;
+    .active {
+      color: yellow;
+    }
+  }
+}
+
+@media screen and (max-width: 1439px) {
+  .dasboard {
+    &-song--info {
+      width: 240px;
+    }
+    &-progress {
+      width: 400px;
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .dasboard {
+    border-radius: 0;
+    &-main {
+      justify-content: unset;
+      gap: 0 25px;
+    }
+    &-song--info {
+      width: 150px;
+    }
+    &-control--2 {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .dasboard {
+    border-radius: 0;
+    &-content {
+      margin-left: 0;
+      width: 85px;
+      white-space: nowrap;
+      text-overflow: clip;
+      overflow: hidden;
+    }
+    &-song--info {
+      .img-bg {
+        display: none;
+      }
+    }
+    &-progress {
+      display: none;
+    }
+    &-control--2 {
+      gap: 0 30px;
+      .btn-rate {
+        display: none;
+      }
+    }
+  }
+}

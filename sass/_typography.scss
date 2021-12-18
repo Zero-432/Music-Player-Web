@@ -1,0 +1,14 @@
+body {
+  color: $primary-color;
+  font-family: $font;
+  line-height: 1;
+  font-size: 16px;
+  background: rgb(36, 38, 47);
+  background: linear-gradient(
+    90deg,
+    rgba(36, 38, 47, 1) 0%,
+    rgba(36, 33, 44, 1) 26%,
+    rgba(30, 21, 34, 1) 43%,
+    rgba(30, 19, 34, 1) 100%
+  );
+}
