@@ -217,11 +217,15 @@ i {
   .header-user {
     display: none;
   }
+  .header-search {
+    gap: 0 25px;
+  }
   .header-search .arrows {
     display: none;
   }
   .header-search .search-wrapper {
     width: auto;
+    margin-left: 0;
   }
   .header-toggle {
     display: inline;
@@ -604,14 +608,18 @@ i {
     background-color: #24262f;
     top: 0;
     left: -100%;
-    padding-top: 100px;
+    padding-top: 65px;
     padding-left: 15px;
+    gap: 40px 0;
     -webkit-transition: 0.5s;
     transition: 0.5s;
     z-index: 99;
   }
   .navbar .line {
     display: none;
+  }
+  .navbar-item {
+    font-size: 1rem;
   }
   .navbar-user {
     display: -webkit-box;

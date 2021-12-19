@@ -248,12 +248,16 @@
     background-color: rgb(36, 38, 47);
     top: 0;
     left: -100%;
-    padding-top: 100px;
+    padding-top: 65px;
     padding-left: 15px;
+    gap: 40px 0;
     transition: 0.5s;
     z-index: 99;
     .line {
       display: none;
+    }
+    &-item {
+      font-size: 1rem;
     }
     &-user {
       display: flex;

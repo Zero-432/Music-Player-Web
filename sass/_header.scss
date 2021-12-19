@@ -82,11 +82,13 @@
       display: none;
     }
     &-search {
+      gap: 0 25px;
       .arrows {
         display: none;
       }
       .search-wrapper {
         width: auto;
+        margin-left: 0;
       }
     }
     &-toggle {
